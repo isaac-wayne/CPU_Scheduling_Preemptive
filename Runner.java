@@ -82,8 +82,7 @@ public class Runner {
                 break;
 
             default:
-                if (choice != 'A' || choice != 'B' || choice != 'C' || choice != 'D' || choice != 'E' || choice != 'F')
-                    System.out.println("Invalid choice!");
+                System.out.println("Invalid choice!");
         }
 
         System.out.print("Input again (y/n)?: ");
