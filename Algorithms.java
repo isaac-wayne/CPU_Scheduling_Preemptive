@@ -19,7 +19,7 @@ public class Algorithms {
         for (int i = 0 ; i < n; i++) {
             remaining_bt[i] = p[i].getBurst_time();
         }
-        
+
         
         int completed = 0;
         int curr_time = 0;
@@ -69,8 +69,12 @@ public class Algorithms {
         avg_tat = (float) total_tat / n;
         avg_wat = (float) total_wat / n;
 
-        System.out.println("Average Turnaround Time: " + avg_tat);
-        System.out.println("Average Waiting Time: " + avg_wat);
+        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
+        for (int i = 0; i < n; i++) {
+            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
+        }
+
+        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat);
     }
     
     public void PreemptivePrio(Process[] p) {
@@ -137,7 +141,11 @@ public class Algorithms {
         avg_tat = (float) total_tat / n;
         avg_wat = (float) total_wat / n;
 
-        System.out.println("Average Turnaround Time: " + avg_tat);
-        System.out.println("Average Waiting Time: " + avg_wat);
+        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Priority" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
+        for (int i = 0; i < n; i++) {
+            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getPrio() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
+        }
+
+        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat);
     }
 }

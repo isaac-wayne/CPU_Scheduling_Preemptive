@@ -1,13 +1,11 @@
 import java.util.Scanner;
 
 public class Runner {
-
-    //TESTING SANA MAG COMMIT ATA?
     public static void main (String [] args) {
         Scanner sc = new Scanner(System.in);
         char choice, choice2;
         int n;
-
+        
     do {
         do {
         System.out.print("Input no. of processes [2-9]: ");
@@ -73,7 +71,14 @@ public class Runner {
                 System.out.println("\nInput individual priority number: ");
                 for (int i = 0;  i < n; i++) {
                     System.out.print("Prio" + (i+1) + ": ");
-                    int prio = sc.nextInt();
+                    int prio;
+                    do {
+                    prio = sc.nextInt();
+                    if (prio < 0) {
+                        System.out.print("Invalid input");
+                        System.out.print("\nInput priority number for P" + (i+1) + ": ");
+                    }
+                    } while (prio < 0);
                     ArrayPrio[i] = prio;
                 }
 
