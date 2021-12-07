@@ -69,7 +69,20 @@ public class Runner {
                 break;
 
             case 'D':
+                int[] ArrayPrio = new int[n];
+                System.out.println("\nInput individual priority number: ");
+                for (int i = 0;  i < n; i++) {
+                    System.out.print("Prio" + (i+1) + ": ");
+                    int prio = sc.nextInt();
+                    ArrayPrio[i] = prio;
+                }
 
+                for (int i = 0; i < n; i++) {
+                    int getPrio = ArrayPrio[i];
+                    myProcess[i].setPrio(getPrio);;
+                }
+
+                alg.PreemptivePrio(myProcess);
                 break;
 
             case 'E':
@@ -91,6 +104,7 @@ public class Runner {
     } while (choice2 == 'y');
 
         if (choice2 == 'n') {
+            sc.close();
             System.out.println("Goodbye!");
         }
     }
