@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Runner {
 
-    //TESTING SANA MAG COMMIT ATA?
     public static void main (String [] args) {
         Scanner sc = new Scanner(System.in);
         char choice, choice2;
@@ -43,7 +42,7 @@ public class Runner {
             myProcess[i] = new Process (i+1, getAT, getBT);
         }
 
-        System.out.println("\nCPU Scheduling Algorithm: ");
+        System.out.println("\nCPU Scheduling Algor4ithm: ");
         System.out.println("[A] Shortest Remaining Time First (SRTF)");
         System.out.println("[B] Round Robin (RR)");
         System.out.println("[C] Round Robin with Overhead (RRO)");
@@ -53,6 +52,7 @@ public class Runner {
 
         System.out.print("\nEnter choice: ");
         choice = sc.next().charAt(0);
+        System.out.println("");
 
         Algorithms alg = new Algorithms();
         switch (choice) {
@@ -72,8 +72,16 @@ public class Runner {
                 int[] ArrayPrio = new int[n];
                 System.out.println("\nInput individual priority number: ");
                 for (int i = 0;  i < n; i++) {
-                    System.out.print("Prio" + (i+1) + ": ");
-                    int prio = sc.nextInt();
+                    System.out.print("P" + (i+1) + ": ");
+                   
+                    int prio;
+                    do {
+                    prio = sc.nextInt();
+                    if (prio < 0) {
+                        System.out.print("Invalid input");
+                        System.out.print("\nInput priority number for P" + (i+1) + ": ");
+                    }
+                    } while (prio < 0);
                     ArrayPrio[i] = prio;
                 }
 
@@ -81,6 +89,7 @@ public class Runner {
                     int getPrio = ArrayPrio[i];
                     myProcess[i].setPrio(getPrio);;
                 }
+                System.out.println("");
 
                 alg.PreemptivePrio(myProcess);
                 break;
@@ -108,4 +117,6 @@ public class Runner {
             System.out.println("Goodbye!");
         }
     }
+
+    
 }
