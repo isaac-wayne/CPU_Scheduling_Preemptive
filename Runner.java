@@ -61,7 +61,12 @@ public class Runner {
                 break;
 
             case 'B':
+                int time_quantum;
+                System.out.println("\nInput time slice: ");
+                time_quantum = sc.nextInt();
+                System.out.println("");
 
+                alg.RoundRobin(myProcess, time_quantum);
                 break;
 
             case 'C':
