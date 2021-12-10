@@ -283,12 +283,12 @@ public class Algorithms {
         printGanttChart(gantt);
         System.out.println("\n");
 
-        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Priority" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
+        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
         for (int i = 0; i < n; i++) {
-            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getPrio() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
+            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
         }
 
-        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat + "\n");
+        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat + "\n");
     }
 
     public void RoundRobinOverhead(Process[] p, int time_quantum, int overhead) {
@@ -407,12 +407,12 @@ public class Algorithms {
 
         System.out.println("\n");
 
-        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Priority" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
+        System.out.print("Process" + "\t\t" + "Arrival Time" + "\t" + "Burst Time" + "\t" + "Completion Time" + "\t\t" + "Waiting Time" + "\t" + "Turnaround Time");
         for (int  i = 0; i < n; i++) {
-            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getPrio() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
+            System.out.print("\nP" + (i+1) + "\t\t" + p[i].getArr_time() + "\t\t" + p[i].getBurst_time() + "\t\t" + p[i].getCompletion_time() + "\t\t\t" + p[i].getWaiting_time() + "\t\t" + p[i].getTurnaround_time());
         }
 
-        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat + "\n");
+        System.out.println("\nAverage" + "\t\t\t\t\t\t\t\t\t" + avg_wat + "\t\t" + avg_tat + "\n");
     }
 
     public void printGanttChart(List<Gantt> gantt) {
