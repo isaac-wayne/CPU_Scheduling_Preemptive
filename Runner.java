@@ -70,7 +70,15 @@ public class Runner {
                 break;
 
             case 'C':
+                int time_quantum_o;
+                int overhead;
+                System.out.println("\nInput time slice: ");
+                time_quantum_o = sc.nextInt();
+                System.out.println("\nInput overhead time: ");
+                overhead = sc.nextInt();
+                System.out.println("");
 
+                alg.RoundRobinOverhead(myProcess, time_quantum_o, overhead);
                 break;
 
             case 'D':
