@@ -1,13 +1,13 @@
 
 public class Process {
-    int pid;
-    int arr_time;
-    int burst_time;
-    int start_time;
-    int prio;
-    int completion_time;
-    int turnaround_time;
-    int waiting_time;
+    private int pid;
+    private int arr_time;
+    private int burst_time;
+    private int start_time;
+    private int prio;
+    private int completion_time;
+    private int turnaround_time;
+    private int waiting_time;
 
     public Process(int pid, int arr_time, int burst_time) {
         this.pid = pid;
@@ -85,6 +85,4 @@ public class Process {
     public void setWaiting_time(int waiting_time) {
         this.waiting_time = waiting_time;
     }
-
-    
 }

@@ -6,10 +6,10 @@ import java.lang.Math;
 public class Algorithms {
     
 
-    int total_tat;
-    int total_wat;
-    float avg_tat;
-    float avg_wat;
+    private int total_tat;
+    private int total_wat;
+    private float avg_tat;
+    private float avg_wat;
     
     //int array to check if process is completed
     int[] isCompleted = new int[9];
@@ -30,8 +30,7 @@ public class Algorithms {
         
         int completed = 0;
         int curr_time = 0;
-        int prev = 0;
-        
+
         while (completed != n) {
             //variable to verify process validity to start
             int valid_process = -1;
@@ -60,7 +59,6 @@ public class Algorithms {
                 }
                 remaining_bt[valid_process] -= 1;
                 curr_time += 1;
-                prev = curr_time;
                 //save time
                 Gantt a = new Gantt(curr_time, p[valid_process].getPid());
                 gantt.add(a);
@@ -105,14 +103,13 @@ public class Algorithms {
         int[] remaining_bt = new int[n];
         //transfer to remaining BT
         for (int i = 0 ; i < n; i++) {
-            remaining_bt[i] = p[i].burst_time;
+            remaining_bt[i] = p[i].getBurst_time();
         }
         
         List<Gantt> gantt = new LinkedList<>();
         
         int completed = 0;
         int curr_time = 0;
-        int prev = 0;
         
         while (completed != n) {
             //variable to verify process validity to start
@@ -149,7 +146,6 @@ public class Algorithms {
                 }
                 remaining_bt[valid_process] -= 1;
                 curr_time += 1;
-                prev = curr_time;
                 //save time
                 Gantt a = new Gantt(curr_time, p[valid_process].getPid());
                 gantt.add(a);
@@ -232,7 +228,7 @@ public class Algorithms {
             //6. If the process is getting CPU for the first time, record its start time as current_time.
             if (remaining_bt[valid_process] == p[valid_process].getBurst_time()) {
                 p[valid_process].setStart_time(Math.max(curr_time, p[valid_process].getArr_time()));
-                curr_time = p[valid_process].start_time;
+                curr_time = p[valid_process].getStart_time();
             }
             //7. Give quantum unit of time to the process that is at front in the queue and pop this process from the queue.
             if (remaining_bt[valid_process] - time_quantum > 0) {
@@ -340,7 +336,7 @@ public class Algorithms {
             //6. If the process is getting CPU for the first time, record its start time as current_time.
             if (remaining_bt[valid_process] == p[valid_process].getBurst_time()) {
                 p[valid_process].setStart_time(Math.max(curr_time, p[valid_process].getArr_time()));
-                curr_time = p[valid_process].start_time;
+                curr_time = p[valid_process].getStart_time();
             }
             //7. Give quantum unit of time to the process that is at front in the queue and pop this process from the queue.
             if (remaining_bt[valid_process] - time_quantum > 0) {
