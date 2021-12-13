@@ -12,7 +12,7 @@ public class Algorithms {
     private float avg_wat;
     
     //int array to check if process is completed
-    int[] isCompleted = new int[9];
+    private int[] isCompleted = new int[9];
 
 
     public void SRTF(Process[] p) {

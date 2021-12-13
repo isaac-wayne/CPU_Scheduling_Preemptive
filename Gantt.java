@@ -1,6 +1,6 @@
 public class Gantt {
-    int time;
-    int pid;
+    private int time;
+    private int pid;
     
     public Gantt(int time, int pid) {
         this.time = time;
