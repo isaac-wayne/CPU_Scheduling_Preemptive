@@ -1,6 +1,6 @@
 # CPU_Scheduling_Preemptive
 
-https://outlook.office.com/webhook/12345678-aaaa-bbbb-cccc-1234567890ab@12345678-aaaa-bbbb-cccc-1234567890ab/IncomingWebhook/abcdef1234567890abcdef1234567890/12345678-aaaa-bbbb-cccc-1234567890ab
+https://teams.microsoft.com/webhook/12345678-aaaa-bbbb-cccc-1234567890ab@12345678-aaaa-bbbb-cccc-1234567890ab/IncomingWebhook/abcdef1234567890abcdef1234567890/12345678-aaaa-bbbb-cccc-1234567890ab
 
 USAGE: Run "runner.java" (Java)
 
